@@ -49,7 +49,7 @@ while True:
                             contact = client.getContact(sender)
                             if text.lower() == 'me':
                                 client.sendMessage(receiver, None, contentMetadata={'mid': sender}, contentType=13)
-                            elif text.lower() == 'sp':
+                            elif text.lower() == 'speed':
                                 start = time.time()
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
@@ -70,7 +70,7 @@ while True:
                                     client.sendImageWithURL(receiver, a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif text.lower() == 'tag':
+                            elif text.lower() == 'tagall':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
