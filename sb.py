@@ -53,7 +53,7 @@ while True:
                                 start = time.time()
                                 client.sendText(receiver, "TestSpeed")
                                 elapsed_time = time.time() - start
-                                client.sendText(receiver, "%sdetik" % (elapsed_time))
+                                client.sendText(receiver, "%sseconds" % (elapsed_time))
                             elif 'spic' in text.lower():
                                 try:
                                     key = eval(msg.contentMetadata["MENTION"])
@@ -70,7 +70,7 @@ while True:
                                     client.sendImageWithURL(receiver, a)
                                 except Exception as e:
                                     client.sendText(receiver, str(e))
-                            elif text.lower() == 'tag':
+                            elif text.lower() == 'แทก':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 nm1, nm2, nm3, nm4, nm5, jml = [], [], [], [], [], len(nama)
@@ -122,8 +122,8 @@ while True:
                                     for m in range(401, len(nama)):
                                         nm5 += [nama[m]]
                                     client.mention(msg.to, nm5)             
-                                client.sendText(receiver, "Members :"+str(jml))
-                            elif text.lower() == 'set':
+                                client.sendText(receiver, "ห้องนี้มีสมาชิกทั้งหมด :"+str(jml))
+                            elif text.lower() == 'นับ':
                                 try:
                                     del cctv['point'][msg.to]
                                     del cctv['sidermem'][msg.to]
@@ -133,12 +133,12 @@ while True:
                                 cctv['point'][msg.to] = msg.id
                                 cctv['sidermem'][msg.to] = ""
                                 cctv['cyduk'][msg.to]=True
-                            elif text.lower() == 'read':
+                            elif text.lower() == 'อ่าน':
                                 if msg.to in cctv['point']:
                                     cctv['cyduk'][msg.to]=False
                                     client.sendText(msg.to, cctv['sidermem'][msg.to])
                                 else:
-                                    client.sendText(msg.to, "พิมพ์คำว่า Set ก่อน")
+                                    client.sendText(msg.to, "พิมพ์คำว่า นับ ก่อน")
                 except Exception as e:
                     client.log("[SEND_MESSAGE] ERROR : " + str(e))
 
@@ -151,7 +151,7 @@ while True:
                                 pass
                             else:
                                 cctv['sidermem'][op.param1] += "\n~ " + Name
-                                pref=['eh ada','hai kak','aloo..','nah','lg ngapain','halo','sini kak']
+                                pref=['พวกแอบ..','พวกแอบ..','พวกแอบ..','พวกแอบ..','พวกแอบ..','พวกแอบ..','พวกแอบ..']
                                 client.sendText(op.param1, str(random.choice(pref))+' '+Name)
                         else:
                             pass
