@@ -4,9 +4,9 @@ List Command Standart :
 - sp
 - spic
 - scover
-- tag
-- set
-- read
+- แทก
+- นับ
+- อ่าน
 
 Required :
 - Hacker Keyboard (PlayStore)
