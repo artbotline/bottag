@@ -8,10 +8,6 @@ List Command Standart :
 - นับ
 - อ่าน
 
-Required :
-- Hacker Keyboard (PlayStore)
-- Termux (PlayStore)
-
 Instalasi di termux :
 - apt update && apt upgrade
 - apt install python
@@ -19,7 +15,7 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone http://github.com/tankeng/bottag/
+- git clone https://github.com/artbotline/bottag/
 
 Run on termux :
 - cd bottag
