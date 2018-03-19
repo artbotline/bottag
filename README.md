@@ -15,7 +15,7 @@ Instalasi di termux :
 - pip3 install rsa
 - pip3 install requests
 - pip3 install thrift
-- git clone https://github.com/artbotline/bottag/
+- git clone https://github.com/artbotline/bottag.git
 
 Run on termux :
 - cd bottag
